@@ -17,42 +17,51 @@ const AddNote = () => {
     setNote({ ...note, [e.target.name]: e.target.value });
   };
   return (
-    <form className="my-3">
-      <div className="form-group">
-        <label htmlFor="title ">Title</label>
-        <input
-          type="text"
-          className="form-control"
-          id="title"
-          name="title"
-          aria-describedby="emailHelp"
-          onChange={onChange}
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="description">Description</label>
-        <input
-          type="text"
-          className="form-control"
-          id="description"
-          name="description"
-          onChange={onChange}
-        />
-      </div>
-      <div className="form-check">
-        <input
-          type="checkbox"
-          className="form-check-input"
-          id="exampleCheck1"
-        />
-        <label className="form-check-label" htmlFor="exampleCheck1">
-          Check me out
-        </label>
-      </div>
-      <button type="submit" className="btn btn-primary" onClick={handleClick}>
-        Add Note
-      </button>
-    </form>
+    <div className="container">
+      <form>
+        <div className="mb-3">
+          <label htmlFor="exampleInputEmail1" className="form-label">
+            Title
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="title"
+            name="title"
+            aria-describedby="emailHelp"
+            onChange={onChange}
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="exampleInputPassword1" className="form-label">
+            Description
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="description"
+            name="description"
+            onChange={onChange}
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="exampleInputPassword1" className="form-label">
+            Tag
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="tag"
+            name="tag"
+            onChange={onChange}
+          />
+        </div>
+
+        <button type="submit" className="btn btn-primary" onClick={handleClick}>
+          Add Note
+        </button>
+      </form>
+    </div>
   );
 };
 
